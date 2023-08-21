@@ -20,35 +20,7 @@ namespace E_Commerce.Paginas
         public PaginaProdutos()
         {
             InitializeComponent();
-            ConxãoBancoMysql();
         }
-        private void ConxãoBancoMysql()
-        {
-            try
-            {
-                conn = new MySqlConnection(data_source);
-                conn.Open();
-                MessageBox.Show("Conectado com Sucesso!!!!");
-
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("ERRO " + ex.Number + " ocorreu " + ex.Message,
-                    "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu " + ex.Message,
-                    "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
         private void InsertProdutos()
         {
             try
@@ -61,17 +33,12 @@ namespace E_Commerce.Paginas
 
                 cmd.Connection = conn;
 
-
-                DateTime dataCadastro = Convert.ToDateTime(DataCadastroProdutos);
-                DateTime dataEntrada = Convert.ToDateTime(DataEntradaProdutos);
-
-
                 cmd.CommandText = "INSERT INTO produtos (NomeProduto,PrecoProduto,QuantidadeProduto,MarcaProduto,FornecedorProduto,PesoProduto,DadosFiscaisProduto,CodigoProduto,EmbalagemProduto," +
                     "TipoProduto,DataCadastro,DataEntrada)" +
                     "VALUES (@NomeProduto,@Preço,@Quantidade,@Marca,@Fornecedores,@Peso" +
-                    ",@DadosFiscais,@CodigoDeBarras,@Embalagem,@TipoProduto,'" + DataCadastroProdutos.ToString() + "','" + DataEntradaProdutos.ToString() + "')";
+                    ",@DadosFiscais,@CodigoDeBarras,@Embalagem,@TipoProduto,@DataCadastro,@DataEntrada)";
 
-                
+
 
                 cmd.Parameters.AddWithValue("@NomeProduto", TxtNomeProduto.Text);
                 cmd.Parameters.AddWithValue("@Preço", TxtPreçoProduto.Text);
@@ -83,8 +50,8 @@ namespace E_Commerce.Paginas
                 cmd.Parameters.AddWithValue("@CodigoDeBarras", TxtCodigoProduto.Text);
                 cmd.Parameters.AddWithValue("@Embalagem", TxtEmbalagemProduto.Text);
                 cmd.Parameters.AddWithValue("@TipoProduto", ComboBoxTipoProdutos.GetItemText(ComboBoxTipoProdutos.SelectedItem));
-                cmd.Parameters.AddWithValue("@DataCadastro", SqlDbType.Date).Value = DataCadastroProdutos.Value.Date;
-                cmd.Parameters.AddWithValue("@DataEntrada", SqlDbType.Date).Value = DataEntradaProdutos.Value.Date;
+                cmd.Parameters.AddWithValue("@DataCadastro", DataCadastroProdutos.Value);
+                cmd.Parameters.AddWithValue("@DataEntrada", DataEntradaProdutos.Value);
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
 
@@ -129,6 +96,11 @@ namespace E_Commerce.Paginas
         private void BtnCadastrarProduto_Click(object sender, EventArgs e)
         {
             InsertProdutos();
+        }
+
+        private void BtnSairProdutos_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

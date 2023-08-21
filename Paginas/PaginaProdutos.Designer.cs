@@ -242,6 +242,7 @@
             ComboBoxTipoProdutos.Name = "ComboBoxTipoProdutos";
             ComboBoxTipoProdutos.Size = new Size(101, 23);
             ComboBoxTipoProdutos.TabIndex = 36;
+            ComboBoxTipoProdutos.Text = "[Selecione]";
             // 
             // labelTipoProduto
             // 
@@ -301,6 +302,7 @@
             BtnSairProdutos.TabIndex = 42;
             BtnSairProdutos.Text = "Sair";
             BtnSairProdutos.UseVisualStyleBackColor = true;
+            BtnSairProdutos.Click += BtnSairProdutos_Click;
             // 
             // PaginaProdutos
             // 

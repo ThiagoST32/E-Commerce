@@ -90,12 +90,10 @@ namespace E_Commerce
         {
             OpenChildForm(new Paginas.PaginaProdutos(), sender);
         }
-
         private void BtnTabelaProdutos_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Paginas.PaginaTabelaProdutos(), sender);
         }
-
         private void BtnFuncionarios_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Paginas.PaginaCadastrarFuncionario(), sender);
