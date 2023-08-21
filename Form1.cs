@@ -1,3 +1,5 @@
+using MySql.Data.MySqlClient;
+
 namespace E_Commerce
 {
     public partial class Form1 : Form
@@ -5,16 +7,15 @@ namespace E_Commerce
         private Button currentButton;
         private Random random;
         private int tempIndex;
-
+        private Form activeForm;
+       
 
         public Form1()
         {
-
+            random = new Random();
             InitializeComponent();
 
         }
-
-
 
         //Methods
 
@@ -24,7 +25,7 @@ namespace E_Commerce
             int index = random.Next(ThemeColor.ColorList.Count);
             while (tempIndex == index)
             {
-                random.Next(ThemeColor.ColorList.Count);
+                index = random.Next(ThemeColor.ColorList.Count);
             }
             tempIndex = index;
             string color = ThemeColor.ColorList[tempIndex];
@@ -36,19 +37,16 @@ namespace E_Commerce
         {
             if (btnSender != null)
             {
-                if (currentButton == (Button)btnSender)
+                if (currentButton != (Button)btnSender)
                 {
-                    //Chamo a função Disable
+                    //Chamo a função Disable//Chamo a variavel currentButton para//Chamo a variavel color e defino como backColor//Defino uma cor para o backColor chamando a função Color
+                    //Defino a fonte do botão 
                     DisableButton();
                     Color color = SelectThemeColor();
-                    //Chamo a variavel currentButton para 
                     currentButton = (Button)btnSender;
-                    //Chamo a variavel color e defino como backColor
                     currentButton.BackColor = color;
-                    //Defino uma cor para o backColor chamando a função Color
                     currentButton.ForeColor = Color.White;
-                    //Defino a fonte do botão 
-                    currentButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+                    currentButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
                 }
             }
         }
@@ -61,36 +59,54 @@ namespace E_Commerce
             {
                 if (previuosBtn.GetType() == typeof(Button))
                 {
-                    previuosBtn.BackColor = Color.FromArgb(14, 42, 86);
+                    previuosBtn.BackColor = Color.FromArgb(224, 81, 53);
                     previuosBtn.ForeColor = Color.White;
-                    previuosBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Regular, GraphicsUnit.Point);
+                    previuosBtn.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
                 }
             }
         }
 
-        private void BtnConfigurações_Click(object sender, EventArgs e)
+        private void OpenChildForm(Form childform, object btnsender)
         {
-            ActiveButton(sender);
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            ActiveButton(btnsender);
+            activeForm = childform;
+            childform.TopLevel = false;
+            childform.FormBorderStyle = FormBorderStyle.None;
+            childform.Dock = DockStyle.Fill;
+            this.panelFundoSystem.Controls.Add(childform);
+            this.panelFundoSystem.Tag = childform;
+            childform.BringToFront();
+            childform.Show();
+            labelHome.Text = childform.Text;
+
+
         }
 
         private void BtnProduto_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender);
+            OpenChildForm(new Paginas.PaginaProdutos(), sender);
         }
 
         private void BtnTabelaProdutos_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender);
-        }
-
-        private void BtnTabelaFuncionarios_Click(object sender, EventArgs e)
-        {
-            ActiveButton(sender);
+            OpenChildForm(new Paginas.PaginaTabelaProdutos(), sender);
         }
 
         private void BtnFuncionarios_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender);
+            OpenChildForm(new Paginas.PaginaCadastrarFuncionario(), sender);
+        }
+        private void BtnTabelaFuncionarios_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Paginas.PaginaTabelaFuncionario(), sender);
+        }
+        private void BtnConfigurações_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Paginas.PaginaConfigurações(), sender);
         }
     }
 }

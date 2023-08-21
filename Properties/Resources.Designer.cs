@@ -63,6 +63,16 @@ namespace E_Commerce.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carrinho_de_compras {
+            get {
+                object obj = ResourceManager.GetObject("carrinho-de-compras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carrinho_de_compras__2_ {
             get {
                 object obj = ResourceManager.GetObject("carrinho-de-compras (2)", resourceCulture);
@@ -86,6 +96,16 @@ namespace E_Commerce.Properties {
         internal static System.Drawing.Bitmap do_utilizador {
             get {
                 object obj = ResourceManager.GetObject("do-utilizador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap do_utilizador1 {
+            get {
+                object obj = ResourceManager.GetObject("do-utilizador1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
