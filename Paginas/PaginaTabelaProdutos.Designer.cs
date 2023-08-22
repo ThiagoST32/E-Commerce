@@ -62,7 +62,7 @@
             // 
             DataGridTabelaProdutos.BackgroundColor = Color.FromArgb(224, 81, 53);
             DataGridTabelaProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridTabelaProdutos.GridColor = Color.White;
+            DataGridTabelaProdutos.GridColor = Color.Black;
             DataGridTabelaProdutos.Location = new Point(12, 85);
             DataGridTabelaProdutos.Name = "DataGridTabelaProdutos";
             DataGridTabelaProdutos.RowTemplate.Height = 25;

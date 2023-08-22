@@ -61,6 +61,7 @@
             // labelNomeFuncionario
             // 
             labelNomeFuncionario.AutoSize = true;
+            labelNomeFuncionario.ForeColor = Color.White;
             labelNomeFuncionario.Location = new Point(12, 9);
             labelNomeFuncionario.Name = "labelNomeFuncionario";
             labelNomeFuncionario.Size = new Size(40, 15);
@@ -77,6 +78,7 @@
             // labelCPFuncionario
             // 
             labelCPFuncionario.AutoSize = true;
+            labelCPFuncionario.ForeColor = Color.White;
             labelCPFuncionario.Location = new Point(12, 59);
             labelCPFuncionario.Name = "labelCPFuncionario";
             labelCPFuncionario.Size = new Size(28, 15);
@@ -86,6 +88,7 @@
             // labelIdadeFuncionario
             // 
             labelIdadeFuncionario.AutoSize = true;
+            labelIdadeFuncionario.ForeColor = Color.White;
             labelIdadeFuncionario.Location = new Point(124, 9);
             labelIdadeFuncionario.Name = "labelIdadeFuncionario";
             labelIdadeFuncionario.Size = new Size(36, 15);
@@ -95,6 +98,7 @@
             // labelRGFuncionario
             // 
             labelRGFuncionario.AutoSize = true;
+            labelRGFuncionario.ForeColor = Color.White;
             labelRGFuncionario.Location = new Point(124, 59);
             labelRGFuncionario.Name = "labelRGFuncionario";
             labelRGFuncionario.Size = new Size(22, 15);
@@ -104,6 +108,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.ForeColor = Color.White;
             label5.Location = new Point(230, 59);
             label5.Name = "label5";
             label5.Size = new Size(98, 15);
@@ -113,6 +118,7 @@
             // labelEmailFuncionario
             // 
             labelEmailFuncionario.AutoSize = true;
+            labelEmailFuncionario.ForeColor = Color.White;
             labelEmailFuncionario.Location = new Point(230, 9);
             labelEmailFuncionario.Name = "labelEmailFuncionario";
             labelEmailFuncionario.Size = new Size(41, 15);
@@ -122,6 +128,7 @@
             // labelCEPFuncionario
             // 
             labelCEPFuncionario.AutoSize = true;
+            labelCEPFuncionario.ForeColor = Color.White;
             labelCEPFuncionario.Location = new Point(12, 103);
             labelCEPFuncionario.Name = "labelCEPFuncionario";
             labelCEPFuncionario.Size = new Size(28, 15);
@@ -175,6 +182,7 @@
             // labelNumeroFuncionario
             // 
             labelNumeroFuncionario.AutoSize = true;
+            labelNumeroFuncionario.ForeColor = Color.White;
             labelNumeroFuncionario.Location = new Point(124, 103);
             labelNumeroFuncionario.Name = "labelNumeroFuncionario";
             labelNumeroFuncionario.Size = new Size(79, 15);
@@ -184,6 +192,7 @@
             // labelEstadoCivil
             // 
             labelEstadoCivil.AutoSize = true;
+            labelEstadoCivil.ForeColor = Color.White;
             labelEstadoCivil.Location = new Point(230, 103);
             labelEstadoCivil.Name = "labelEstadoCivil";
             labelEstadoCivil.Size = new Size(68, 15);
@@ -209,6 +218,7 @@
             BtnCadastrarFuncionario.TabIndex = 19;
             BtnCadastrarFuncionario.Text = "Cadastrar";
             BtnCadastrarFuncionario.UseVisualStyleBackColor = true;
+            BtnCadastrarFuncionario.Click += BtnCadastrarFuncionario_Click;
             // 
             // ComboBoxCargoFuncionario
             // 
@@ -222,6 +232,7 @@
             // labelCargoFnuncionario
             // 
             labelCargoFnuncionario.AutoSize = true;
+            labelCargoFnuncionario.ForeColor = Color.White;
             labelCargoFnuncionario.Location = new Point(12, 148);
             labelCargoFnuncionario.Name = "labelCargoFnuncionario";
             labelCargoFnuncionario.Size = new Size(39, 15);
@@ -231,6 +242,7 @@
             // labelDataEntrada
             // 
             labelDataEntrada.AutoSize = true;
+            labelDataEntrada.ForeColor = Color.White;
             labelDataEntrada.Location = new Point(124, 148);
             labelDataEntrada.Name = "labelDataEntrada";
             labelDataEntrada.Size = new Size(90, 15);
@@ -240,6 +252,7 @@
             // labelTurnoFuncionario
             // 
             labelTurnoFuncionario.AutoSize = true;
+            labelTurnoFuncionario.ForeColor = Color.White;
             labelTurnoFuncionario.Location = new Point(230, 148);
             labelTurnoFuncionario.Name = "labelTurnoFuncionario";
             labelTurnoFuncionario.Size = new Size(38, 15);
@@ -291,6 +304,7 @@
             BtnSairCadastroFuncionario.TabIndex = 29;
             BtnSairCadastroFuncionario.Text = "Sair";
             BtnSairCadastroFuncionario.UseVisualStyleBackColor = true;
+            BtnSairCadastroFuncionario.Click += BtnSairCadastroFuncionario_Click;
             // 
             // PaginaCadastrarFuncionario
             // 

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             panelFundoConfiguracao = new Panel();
-            BtnHomeConfiguração = new Button();
             BtnSairConfiguração = new Button();
             BtnTesteBancoConfiguracao = new Button();
             panelFundoConfiguracao.SuspendLayout();
@@ -37,7 +36,6 @@
             // 
             // panelFundoConfiguracao
             // 
-            panelFundoConfiguracao.Controls.Add(BtnHomeConfiguração);
             panelFundoConfiguracao.Controls.Add(BtnSairConfiguração);
             panelFundoConfiguracao.Controls.Add(BtnTesteBancoConfiguracao);
             panelFundoConfiguracao.Dock = DockStyle.Fill;
@@ -45,17 +43,6 @@
             panelFundoConfiguracao.Name = "panelFundoConfiguracao";
             panelFundoConfiguracao.Size = new Size(507, 336);
             panelFundoConfiguracao.TabIndex = 4;
-            // 
-            // BtnHomeConfiguração
-            // 
-            BtnHomeConfiguração.FlatStyle = FlatStyle.Flat;
-            BtnHomeConfiguração.ForeColor = Color.White;
-            BtnHomeConfiguração.Location = new Point(12, 222);
-            BtnHomeConfiguração.Name = "BtnHomeConfiguração";
-            BtnHomeConfiguração.Size = new Size(116, 42);
-            BtnHomeConfiguração.TabIndex = 6;
-            BtnHomeConfiguração.Text = "Home";
-            BtnHomeConfiguração.UseVisualStyleBackColor = true;
             // 
             // BtnSairConfiguração
             // 
@@ -67,12 +54,13 @@
             BtnSairConfiguração.TabIndex = 5;
             BtnSairConfiguração.Text = "Sair";
             BtnSairConfiguração.UseVisualStyleBackColor = true;
+            BtnSairConfiguração.Click += BtnSairConfiguração_Click;
             // 
             // BtnTesteBancoConfiguracao
             // 
             BtnTesteBancoConfiguracao.FlatStyle = FlatStyle.Flat;
             BtnTesteBancoConfiguracao.ForeColor = Color.White;
-            BtnTesteBancoConfiguracao.Location = new Point(12, 174);
+            BtnTesteBancoConfiguracao.Location = new Point(12, 222);
             BtnTesteBancoConfiguracao.Name = "BtnTesteBancoConfiguracao";
             BtnTesteBancoConfiguracao.Size = new Size(116, 42);
             BtnTesteBancoConfiguracao.TabIndex = 4;
@@ -94,7 +82,6 @@
         }
 
         #endregion
-        private Button BtnHomeConfiguração;
         private Panel panelFundoConfiguracao;
         private Button BtnTesteBancoConfiguracao;
         private Button BtnSairConfiguração;

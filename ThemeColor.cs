@@ -10,6 +10,6 @@ namespace E_Commerce
     {
         public static Color PrimaryColor { get; set; }
         public static Color SecondaryColor { get; set; }
-        public static List<string> ColorList = new List<string>() { "#293470", "#293470" };
+        public static List<string> ColorList = new List<string>() { "#e05135", "#e05135" };
     }
 }

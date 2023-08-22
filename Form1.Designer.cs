@@ -33,6 +33,7 @@ namespace E_Commerce
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panelMenu = new Panel();
+            BtnSairHome = new Button();
             BtnConfigurações = new Button();
             BtnTabelaFuncionarios = new Button();
             BtnFuncionarios = new Button();
@@ -42,7 +43,6 @@ namespace E_Commerce
             panelLogoMain = new Panel();
             labelHome = new Label();
             panelFundoSystem = new Panel();
-            BtnSairHome = new Button();
             panelMenu.SuspendLayout();
             panelLogoMain.SuspendLayout();
             SuspendLayout();
@@ -62,6 +62,22 @@ namespace E_Commerce
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(200, 447);
             panelMenu.TabIndex = 0;
+            // 
+            // BtnSairHome
+            // 
+            BtnSairHome.Dock = DockStyle.Top;
+            BtnSairHome.FlatAppearance.BorderSize = 0;
+            BtnSairHome.FlatStyle = FlatStyle.Flat;
+            BtnSairHome.ForeColor = Color.White;
+            BtnSairHome.Image = (Image)resources.GetObject("BtnSairHome.Image");
+            BtnSairHome.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnSairHome.Location = new Point(0, 325);
+            BtnSairHome.Name = "BtnSairHome";
+            BtnSairHome.Size = new Size(200, 50);
+            BtnSairHome.TabIndex = 6;
+            BtnSairHome.Text = "Sair";
+            BtnSairHome.UseVisualStyleBackColor = true;
+            BtnSairHome.Click += BtnSairHome_Click;
             // 
             // BtnConfigurações
             // 
@@ -186,21 +202,6 @@ namespace E_Commerce
             panelFundoSystem.Name = "panelFundoSystem";
             panelFundoSystem.Size = new Size(539, 372);
             panelFundoSystem.TabIndex = 2;
-            // 
-            // BtnSairHome
-            // 
-            BtnSairHome.Dock = DockStyle.Top;
-            BtnSairHome.FlatAppearance.BorderSize = 0;
-            BtnSairHome.FlatStyle = FlatStyle.Flat;
-            BtnSairHome.ForeColor = Color.White;
-            BtnSairHome.Image = (Image)resources.GetObject("BtnSairHome.Image");
-            BtnSairHome.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnSairHome.Location = new Point(0, 325);
-            BtnSairHome.Name = "BtnSairHome";
-            BtnSairHome.Size = new Size(200, 50);
-            BtnSairHome.TabIndex = 6;
-            BtnSairHome.Text = "Sair";
-            BtnSairHome.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

@@ -79,36 +79,36 @@ namespace E_Commerce.Paginas
 
         }
         private void LoadDataFromDatabase()
-        { 
+        {
             using (MySqlConnection connection = new MySqlConnection(data_source))
-            try
-            {
-                string query = "SELECT * FROM produtos;";
+                try
+                {
+                    string query = "SELECT * FROM produtos;";
 
 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
-                DataTable dataTable = new DataTable();
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
 
-                adapter.Fill(dataTable);
+                    adapter.Fill(dataTable);
 
-                DataGridTabelaProdutos.DataSource = dataTable;
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("ERRO " + ex.Number + " ocorreu " + ex.Message,
-                    "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DataGridTabelaProdutos.DataSource = dataTable;
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("ERRO " + ex.Number + " ocorreu " + ex.Message,
+                        "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu " + ex.Message,
-                    "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocorreu " + ex.Message,
+                        "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
-            finally
-            {
-                connection.Close();
-            }
+                }
+                finally
+                {
+                    connection.Close();
+                }
 
 
 

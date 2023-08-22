@@ -55,58 +55,10 @@ namespace E_Commerce.Paginas
         {
             ConxãoBancoMysql();
         }
-        /* 
-* private Color SelectThemeColor()
-{
-    int index = random.Next(ThemeColor.ColorList.Count);
-    while (tempIndex == index)
-    {
-        index = random.Next(ThemeColor.ColorList.Count);
-    }
-    tempIndex = index;
-    string color = ThemeColor.ColorList[tempIndex];
-    return ColorTranslator.FromHtml(color);
-}
 
-//Função onde irá executar a função SeletcThemeColor
-private void ActiveButton(object btnSender)
-{
-    if (btnSender != null)
-    {
-        if (currentButton != (Button)btnSender)
+        private void BtnSairConfiguração_Click(object sender, EventArgs e)
         {
-            //Chamo a função Disable//Chamo a variavel currentButton para//Chamo a variavel color e defino como backColor//Defino uma cor para o backColor chamando a função Color
-            currentButton = (Button)btnSender;
+            this.Close();
         }
-    }
-}
-
-//Função Desativa o botão
-private void OpenChildForm(Form childform, object btnsender)
-{
-    if (activeForm != null)
-    {
-        activeForm.Close();
-    }
-    ActiveButton(btnsender);
-    activeForm = childform;
-    childform.TopLevel = false;
-    childform.FormBorderStyle = FormBorderStyle.None;
-    childform.Dock = DockStyle.Fill;
-    this.panelFundoConfiguracao.Controls.Add(childform);
-    this.panelFundoConfiguracao.Tag = childform;
-    childform.BringToFront();
-    childform.Show();
-
-}
-private void BtnSairConfiguracao_Click(object sender, EventArgs e)
-{
-
-}
-
-private void BtnHomeConfiguracao_Click(object sender, EventArgs e)
-{
-    OpenChildForm(new Form1(), sender);
-}*/
     }
 }

@@ -8,7 +8,7 @@ namespace E_Commerce
         private Random random;
         private int tempIndex;
         private Form activeForm;
-       
+
 
         public Form1()
         {
@@ -105,6 +105,11 @@ namespace E_Commerce
         private void BtnConfigurações_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Paginas.PaginaConfigurações(), sender);
+        }
+
+        private void BtnSairHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
